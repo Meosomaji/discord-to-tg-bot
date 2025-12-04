@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: discord-to-telegram
+    env: python
+    region: frankfurt
+    plan: free
+    buildCommand: ""
+    startCommand: gunicorn main:app
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: YOUR_TELEGRAM_TOKEN
+      - key: CHAT_ID
+        value: YOUR_CHAT_ID
